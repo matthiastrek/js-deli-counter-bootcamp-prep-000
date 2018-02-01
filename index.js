@@ -1,15 +1,14 @@
 var katzDeli = []
 
-function takeANumber(katzDeli, name) {
-  katzDeli.push(`${name}`)
-  return `Welcome, ${name}. You are number ${katzDeli.length} in line.` 
+var x = 0
+
+function takeANumber(katzDeli) {
+  x += 1
+  katzDeli.push(x)
+  return `You are number ${x} in line.` 
 }
 
-function nowServing(katzDeli) {
-  let i = 0
-  while (i < katzDeli.length) {
-    i++
-  }
+function nowServing() {
   if (katzDeli.length === 0) {
     return 'There is nobody waiting to be served!'
   } else {
